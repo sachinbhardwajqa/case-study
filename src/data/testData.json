@@ -1,12 +1,23 @@
 {
-    "credentials": {
-      "user": "standard_user",
-      "pass": "secret_sauce"
-    },
-    "pageTitles": {
-        "loginPage": "Swag Labs"
-    },
-    "pageURLs": {
-        "inventoryPage": "inventory.html"
-    }
+  "credentials": {
+    "user": "standard_user",
+    "pass": "secret_sauce"
+  },
+  "pageTitles": {
+      "loginPage": "Swag Labs"
+  },
+  "pageURLs": {
+      "inventoryPage": "inventory.html",
+      "checkoutCompletePage": "checkout-complete.html"
+  },
+  "customer": {
+    "firstName": "Sachin Bhardwaj",
+    "lastName": "SDET",
+    "zip": "122103"
+  },
+  "noOfItemsToBeAddedInCart" : 3,
+  "gstPercentage": 8,
+  "messages": {
+    "successParams": "Thank you for your order!"
   }
+}
