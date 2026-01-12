@@ -1,0 +1,12 @@
+{
+    "credentials": {
+      "user": "standard_user",
+      "pass": "secret_sauce"
+    },
+    "pageTitles": {
+        "loginPage": "Swag Labs"
+    },
+    "pageURLs": {
+        "inventoryPage": "inventory.html"
+    }
+  }
