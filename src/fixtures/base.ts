@@ -2,6 +2,8 @@ import { test as base } from '@playwright/test';
 
 // Importing required pages to declare fixtures
 import { LoginPage } from '../pages/LoginPage';
+import { InventoryPage } from '../pages/InventoryPage';
+import { CheckoutPage } from '../pages/CheckoutPage';
 
 // Importing test data
 import data from '../data/testData.json';
@@ -9,10 +11,12 @@ import data from '../data/testData.json';
 // Declaring the fixtures here
 type MyFixtures = {
     loginPage: LoginPage;
+    inventoryPage: InventoryPage;
+    checkoutPage: CheckoutPage;
 };
 
 // Declaring the Auth Fixture here
-type AuthFixture = {
+type AuthFixtures = {
     auth: void; 
 };
 
@@ -20,11 +24,17 @@ type AuthFixture = {
 export const test = base.extend<MyFixtures> ({
     loginPage: async({page}, use) => {
         await use (new LoginPage(page));
+    },
+    inventoryPage: async ({ page }, use) => {
+        await use(new InventoryPage(page));
+    },
+    checkoutPage: async ({ page }, use) => {
+        await use(new CheckoutPage(page));
     }
 });
 
 // Using AuthFixture to extend to enable auto login
-export const testWithLogin = test.extend<AuthFixture>({
+export const testWithLogin = test.extend<AuthFixtures>({
     
     auth: [async ({ loginPage, page }, use) => {
         
